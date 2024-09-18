@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.ts": "always",
+    "source.organizeImports": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/*slug*/page.tsx": "${dirname(1)} - page",
+    "**/app/**/*slug*/layout.tsx": "${dirname(1)} - layout",
+    "**/app/**/page.tsx": "${dirname} - page",
+    "**/app/**/layout.tsx": "${dirname} - layout"
+  }
+}
