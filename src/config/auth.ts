@@ -15,6 +15,12 @@ const options: NextAuthOptions = {
   },
   // @ts-expect-error: Drizzle Adapter is for next auth v5 but we're using v4
   adapter: DrizzleAdapter(db),
+  callbacks: {
+    session({ session, user }) {
+      session.user.id = user.id;
+      return session;
+    },
+  },
   providers: [
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
