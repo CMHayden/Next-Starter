@@ -7,10 +7,13 @@ import {
 } from "@nextui-org/react";
 
 import db from "@/db";
+import requireAuth from "@/utils/require-auth";
 
 import GuestBookClient from "./page.client";
 
 export default async function GuestBook() {
+  await requireAuth();
+
   const entries = await db.query.guestbookEntries.findMany({
     orderBy(fields, operators) {
       return operators.desc(fields.createdAt);
