@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 import AppNavbar from "@/components/app-navbar";
 import Providers from "@/components/providers";
 
 import "./globals.css";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Next Starter App",
